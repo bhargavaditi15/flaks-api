@@ -1,1 +1,33 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Certification</th>
+                <th>Certification Designations</th>
+                <th>Issued To</th>
+                <th>Issued</th>
+                <th>Expires</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in details %}
+            <tr>
+                <td>{{ item.Certification }}</td>
+                <td>{{ item.CertificationDesignations }}</td>
+                <td>{{ item.IssuedTo }}</td>
+                <td>{{ item.Issued }}</td>
+                <td>{{ item.Expires }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
